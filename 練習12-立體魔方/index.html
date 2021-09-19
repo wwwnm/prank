@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS.reset/reset.css">
+    <title>立體魔方</title>
+    <style>
+        body{
+            perspective: 800px;
+        }
+        .cute{
+            /* background-color: #bfa; */
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            animation: rotate 5s linear infinite;
+        }
+        .cute div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transition: 3s all;
+        }
+        .img1{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .img2{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .img3{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .img4{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .img5{
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .img6{
+            transform: translateZ(100px);
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotateX(0) rotateY(0);
+            }
+            to{                
+                transform: rotateX(1turn) rotateY(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cute">
+        <div class="img1"><img src="./image/overlord1.webp"></div>
+        <div class="img2"><img src="./image/overlord2.webp"></div>
+        <div class="img3"><img src="./image/overlord3.webp"></div>
+        <div class="img4"><img src="./image/overlord4.webp"></div>
+        <div class="img5"><img src="./image/overlord5.webp"></div>
+        <div class="img6"><img src="./image/overlord6.webp"></div>
+    </div>
+</body>
+</html>
